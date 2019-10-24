@@ -1,11 +1,8 @@
 var mongoose = require('mongoose')
 var fullTime = 10*60*60*1000
 
-//define a schema
-var Schema = mongoose.Schema;
-
 //Create a schema - this is like a blueprint
-var suitTelemetrySchema = new Schema({
+var suitTelemetrySchema = new mongoose.Schema({
 	create_date: {
 		type: Date,
 		default: Date.now
@@ -28,7 +25,7 @@ var suitTelemetrySchema = new Schema({
 	t_water:String
 });
 
-var SuitData = mongoose.model('Artemis', suitDataSchema);
+var SuitData = mongoose.model('CuriositySuit', suitTelemetrySchema);
 
 module.exports.SuitData = function(t, x){
 	var itemOne = SuitData({
