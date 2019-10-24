@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 //initilizes the mongodb
 var mongoose = require('mongoose');
 //Database connector
-mongoose.connect("mongodb://Manny_Carr:Tvstudent1!@nasa-suits-2020-shard-00-00-whk7y.mongodb.net:27017,nasa-suits-2020-shard-00-01-whk7y.mongodb.net:27017,nasa-suits-2020-shard-00-02-whk7y.mongodb.net:27017/test?ssl=true&replicaSet=nasa-suits-2020-shard-0&authSource=admin&retryWrites=true");
+mongoose.connect("mongodb://Manny_Carr:Tvstudent1!@nasa-suits-2020-shard-00-00-whk7y.mongodb.net:27017,nasa-suits-2020-shard-00-01-whk7y.mongodb.net:27017,nasa-suits-2020-shard-00-02-whk7y.mongodb.net:27017/test?ssl=true&replicaSet=nasa-suits-2020-shard-0&authSource=admin&retryWrites=true")
 //mongoose.connect('mongodb://localhost/spacesuit');
 
 
