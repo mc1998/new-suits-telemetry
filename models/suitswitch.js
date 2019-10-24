@@ -15,7 +15,7 @@ var suitSwitchSchema = new mongoose.Schema({
 	o2_off: Boolean
 })
 
-var SuitSwitch = mongoose.model('CuriositySwitch', suitSwitchSchema)
+var SuitSwitch = mongoose.model('ArtemisSwitch', suitSwitchSchema)
 
 module.exports.SuitSwitch = function(x){
 	var itemOne = SuitSwitch({
