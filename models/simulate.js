@@ -25,7 +25,7 @@ var suitTelemetrySchema = new mongoose.Schema({
 	t_water:String
 })
 
-var SuitData = mongoose.model('CuriositySuit', suitTelemetrySchema)
+var SuitData = mongoose.model('Artemis', suitTelemetrySchema)
 
 module.exports.suitTelemetry = function(t, x){
 	var itemOne = SuitData({
