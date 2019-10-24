@@ -23,9 +23,9 @@ var suitTelemetrySchema = new mongoose.Schema({
 	t_battery:String,
 	t_oxygen:String,
 	t_water:String
-});
+})
 
-var SuitData = mongoose.model('CuriositySuit', suitTelemetrySchema);
+var SuitData = mongoose.model('CuriositySuit', suitTelemetrySchema)
 
 module.exports.SuitData = function(t, x){
 	var itemOne = SuitData({
