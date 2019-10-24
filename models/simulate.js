@@ -1,6 +1,5 @@
 var mongoose = require('mongoose')
 var fullTime = 10*60*60*1000
-var Schema = mongoose.Schema;
 
 //Create a schema - this is like a blueprint
 var suitTelemetrySchema = new mongoose.Schema({
