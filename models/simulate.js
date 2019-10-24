@@ -1,8 +1,11 @@
 var mongoose = require('mongoose')
 var fullTime = 10*60*60*1000
 
+//define a schema
+var Schema = mongoose.Schema;
+
 //Create a schema - this is like a blueprint
-var suitTelemetrySchema = new mongoose.Schema({
+var suitTelemetrySchema = new Schema({
 	create_date: {
 		type: Date,
 		default: Date.now
@@ -23,11 +26,11 @@ var suitTelemetrySchema = new mongoose.Schema({
 	t_battery:String,
 	t_oxygen:String,
 	t_water:String
-})
+});
 
-var SuitData = mongoose.model('Artemis', suitTelemetrySchema)
+var SuitData = mongoose.model('Artemis', suitDataSchema);
 
-module.exports.suitTelemetry = function(t, x){
+module.exports.SuitData = function(t, x){
 	var itemOne = SuitData({
 		heart_bpm: heartBeat(),
 		p_sub: pressureSUB(),
@@ -178,7 +181,8 @@ function rateSOP(){
 
 //Function to return all data from the database
 module.exports.getSuitTelemetry = function (callback, limit) {
-	SuitData.find({},{_id:0, __v:0},callback)
+	//SuitData.find({},{_id:0, __v:0},callback)
+	console.log('module.exports')
 }
 
 //Function to return the most recently created dataset
