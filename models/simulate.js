@@ -178,7 +178,7 @@ function rateSOP(){
 
 //Function to return all data from the database
 module.exports.getSuitTelemetry = function (callback, limit) {
-	//SuitData.find({},{_id:0, __v:0},callback)
+	SuitData.find({},{_id:0, __v:0},callback)
 	
 }
 
