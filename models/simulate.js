@@ -27,7 +27,7 @@ var suitTelemetrySchema = new mongoose.Schema({
 
 var SuitData = mongoose.model('CuriositySuit', suitTelemetrySchema)
 
-module.exports.SuitData = function(t, x){
+module.exports.suitTelemetry = function(t, x){
 	var itemOne = SuitData({
 		heart_bpm: heartBeat(),
 		p_sub: pressureSUB(),
