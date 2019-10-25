@@ -31,7 +31,7 @@ app.post('/', urlencodeParser, function(req, res){
 
 	time = Date.now() 
 	//interval = setInterval(Simulation.suitTelemetry.bind(null, time, decider),1000)
-	interval_switch = setInterval(SuitSwitch.SuitSwitch.bind(null,decider),1000)
+	//interval_switch = setInterval(SuitSwitch.SuitSwitch.bind(null,decider),1000)
 
 	res.render('error_ready',{qs: ''})
 })
