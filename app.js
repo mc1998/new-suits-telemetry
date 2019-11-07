@@ -112,8 +112,9 @@ app.get('/api/suit/recent', function(req, res){
 		res.json(data)
 	})
 })
-
-app.get('/api/suitswitch', function(req, res){      
+console.log("before api/suit/recent")
+app.get('/api/suitswitch', function(req, res){ 
+	console.log("after api/suitswitch/recent")
 	SuitSwitch.getSuitSwitch(function (err, data) {
 		if (err) {
 			throw err
@@ -122,9 +123,9 @@ app.get('/api/suitswitch', function(req, res){
 		res.json(data)
 	})
 })
-
+console.log("before api/suitswitch/recent")
 app.get('/api/suitswitch/recent', function(req, res){    
-	console.log("here")
+	console.log("code before getSuitSwitchByDate")
 	SuitSwitch.getSuitSwitchByDate(function (err, data) {
 		if (err) {
 			throw err
