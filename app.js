@@ -97,6 +97,8 @@ app.get('/api/suit', function(req, res){
 	
 	console.log("after api/suit")
 	Simulation.getSuitTelemetry(function (err, data) {
+		
+		console.log("after getSuitTelemetry function")
 		if (err) {
 			throw err
 			console.log(err)
@@ -104,11 +106,14 @@ app.get('/api/suit', function(req, res){
 		res.json(data)
 	})
 })
+
 console.log("before api/suit/recent")
 app.get('/api/suit/recent', function(req, res){   
 	
 	console.log("after api/suit/recent")
 	Simulation.getSuitTelemetryByDate(function (err, data) {
+		
+		console.log("after getSuitTelemetryByDate function")
 		if (err) {
 			throw err
 			console.log(err)
@@ -116,11 +121,14 @@ app.get('/api/suit/recent', function(req, res){
 		res.json(data)
 	})
 })
+
 console.log("before api/suitswitch")
 app.get('/api/suitswitch', function(req, res){ 
 	
 	console.log("after api/suitswitch")
 	SuitSwitch.getSuitSwitch(function (err, data) {
+		
+		console.log("after getSuitSwitch function")
 		if (err) {
 			throw err
 			console.log(err)
@@ -133,6 +141,8 @@ app.get('/api/suitswitch/recent', function(req, res){
 	
 	console.log("code afer api/suitswitch/recent")
 	SuitSwitch.getSuitSwitchByDate(function (err, data) {
+		
+		console.log("after getSuitSwitchByDate function")
 		if (err) {
 			throw err
 			console.log(err)
