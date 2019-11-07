@@ -91,9 +91,11 @@ app.post('/contact', urlencodeParser, function(req, res){
 
 
 
-
+console.log("before api/suit")
 //Returns all simulated data from the database
-app.get('/api/suit', function(req, res){      
+app.get('/api/suit', function(req, res){     
+	
+	console.log("after api/suit")
 	Simulation.getSuitTelemetry(function (err, data) {
 		if (err) {
 			throw err
@@ -102,8 +104,10 @@ app.get('/api/suit', function(req, res){
 		res.json(data)
 	})
 })
-
-app.get('/api/suit/recent', function(req, res){      
+console.log("before api/suit/recent")
+app.get('/api/suit/recent', function(req, res){   
+	
+	console.log("after api/suit/recent")
 	Simulation.getSuitTelemetryByDate(function (err, data) {
 		if (err) {
 			throw err
@@ -112,9 +116,10 @@ app.get('/api/suit/recent', function(req, res){
 		res.json(data)
 	})
 })
-console.log("before api/suit/recent")
+console.log("before api/suitswitch")
 app.get('/api/suitswitch', function(req, res){ 
-	console.log("after api/suitswitch/recent")
+	
+	console.log("after api/suitswitch")
 	SuitSwitch.getSuitSwitch(function (err, data) {
 		if (err) {
 			throw err
@@ -124,8 +129,9 @@ app.get('/api/suitswitch', function(req, res){
 	})
 })
 console.log("before api/suitswitch/recent")
-app.get('/api/suitswitch/recent', function(req, res){    
-	console.log("code before getSuitSwitchByDate")
+app.get('/api/suitswitch/recent', function(req, res){   
+	
+	console.log("code afer api/suitswitch/recent")
 	SuitSwitch.getSuitSwitchByDate(function (err, data) {
 		if (err) {
 			throw err
