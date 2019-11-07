@@ -123,7 +123,8 @@ app.get('/api/suitswitch', function(req, res){
 	})
 })
 
-app.get('/api/suitswitch/recent', function(req, res){      
+app.get('/api/suitswitch/recent', function(req, res){    
+	console.log("here")
 	SuitSwitch.getSuitSwitchByDate(function (err, data) {
 		if (err) {
 			throw err
